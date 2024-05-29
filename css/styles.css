@@ -1,0 +1,161 @@
+/* rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* General */
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+
+  background-color: #545e75;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+input, button {
+  border: none;
+}
+
+.h1 {
+  font-size: 6.4rem;
+}
+
+.h3 {
+  font-size: 2.8rem;
+}
+
+.input {
+  padding: 0.3rem;
+}
+
+/* HEADER */
+
+/* Title */
+
+.header {
+  padding-top: 2rem;
+  background-color: #450920;
+}
+
+.title__container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title__icon {
+  height: 6.4rem;
+  width: 6.4rem;  
+}
+
+.title__text {
+  color: #bb999c;
+}
+
+/* Searchbar */
+
+.search-bar__container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 2.2rem;
+}
+
+.search-bar__input, .search-bar__button {
+  font-size: 2.8rem;
+}
+
+.search-bar__input {
+  border-radius: 1rem 0 0 1rem;
+
+  border: 0.1rem solid #545e75;
+  color: #545e75;
+}
+
+.search-bar__button {
+  border-radius: 0 1rem 1rem 0;
+
+  background-color: #545e75;
+  color: #bb999c;
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+/* Navbar */
+
+.navbar__list {
+  padding: 1.2rem 0;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1.2rem;
+
+  li {
+    padding: 0.5rem 2rem;
+
+    font-size: 2.8rem;
+    color: #bb999c;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+}
+
+/* Product Sections */
+
+.section__container {
+  margin: 2rem;
+  border: 1rem solid #bb999c;
+  border-radius: 10rem;
+
+  padding: 4rem;
+}
+
+.section__title {
+  padding-left: 3rem;
+  padding-bottom: 1.4rem;
+  color: #bb999c;
+  text-transform: uppercase;
+}
+
+.section__list {
+  display: flex;
+  justify-content: space-around;
+
+  li img {
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: #000000;
+  color: #bb999c;
+  text-align: center;
+}
+
+.footer__title {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer__list {
+  li:hover {
+    cursor: pointer;
+  }
+}
+
+.footer__copyright {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
