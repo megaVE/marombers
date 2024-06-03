@@ -9,7 +9,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
 
-  background-color: #545e75;
+  background-color: #bb999c;
 }
 
 a, a:visited, a:hover {
@@ -34,11 +34,12 @@ input, button {
 
 /* HEADER */
 
-/* Title */
+/* Title and Container */
 
 .header {
   padding-top: 2rem;
   background-color: #450920;
+  box-shadow: 0 1rem 1rem #450920;
 }
 
 .title__container {
@@ -54,6 +55,7 @@ input, button {
 
 .title__text {
   color: #bb999c;
+  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
 }
 
 /* Searchbar */
@@ -62,7 +64,8 @@ input, button {
   display: flex;
   justify-content: center;
 
-  margin-top: 2.2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 2.2rem;
 }
 
 .search-bar__input, .search-bar__button {
@@ -70,17 +73,26 @@ input, button {
 }
 
 .search-bar__input {
+  min-width: 40%;
   border-radius: 1rem 0 0 1rem;
 
   border: 0.1rem solid #545e75;
-  color: #545e75;
+  color: #450920;
+}
+
+.search-bar__input::placeholder {
+  color: #450920;
+}
+
+.search-bar__input:focus {
+  outline: 0.1rem solid #bb999c;
 }
 
 .search-bar__button {
   border-radius: 0 1rem 1rem 0;
 
-  background-color: #545e75;
-  color: #bb999c;
+  background-color: #bb999c;
+  color: #450920;
 
   :hover {
     cursor: pointer;
@@ -102,26 +114,55 @@ input, button {
 
     font-size: 2.8rem;
     color: #bb999c;
+    border: 0.1rem solid #bb999c;
+
+    transition-duration: 0.2s;
   }
 
   li:hover {
     cursor: pointer;
+
+    text-shadow: 0.1rem 0.1rem 0.1rem #bb999c;
+    box-shadow: 0.2rem 0.2rem 0.2rem #bb999c;
+  }
+}
+
+/* Section Splitter */
+
+.splitter {
+  display: flex;
+  justify-content: center;
+  height: 1rem;
+
+  div {
+    width: 95%;
+    height: 0.3rem;
+
+    background: linear-gradient(90deg, rgba(69,9,32,0) 0%, rgba(69,9,32,1) 30%, rgba(69,9,32,1) 70%, rgba(69,9,32,0) 100%);
   }
 }
 
 /* Product Sections */
 
 .section__container {
+  position: relative;
   margin: 2rem;
-  border: 1rem solid #bb999c;
+  border: 1rem solid #450920;
   border-radius: 10rem;
 
   padding: 4rem;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .section__title {
-  padding-left: 3rem;
-  padding-bottom: 1.4rem;
+  position: absolute;
+  top: -1rem;
+  margin-left: 10rem;
+
+  padding: 0 2rem;
+  border-radius: 1rem;
+
+  background-color: #450920;
   color: #bb999c;
   text-transform: uppercase;
 }
@@ -139,7 +180,10 @@ input, button {
 /* Footer */
 
 .footer {
-  background-color: #000000;
+  margin-top: 1rem;
+  box-shadow: 0 -1rem 1rem #450920;
+
+  background-color: #450920;
   color: #bb999c;
   text-align: center;
 }
