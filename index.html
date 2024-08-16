@@ -11,96 +11,269 @@
   <!-- Linearicons -->
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JavaScript -->
+   <script src="js/script.js" defer></script>
   <!-- Config -->
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <title>
     Marombers
   </title>
 </head>
-<body>
-  <header class="header">
-    <a href="#">
-      <div class="title__container">
+<body class="font-lato bg-rosybrown-900">
+  <header class="bg-fireenginered-200 py-4 mb-2">
+    <div class="hidden md:flex justify-end text-white pr-4 space-x-4">
+      <a href="#" class="hover:text-rosybrown-700 active:text-rosybrown-500 duration-200">
+        Login
+      </a>
+      <a href="#" class="hover:text-rosybrown-700 active:text-rosybrown-500 duration-200">
+        Cadastro
+      </a>
+    </div>
+    <div class="flex justify-between md:hidden">
+      <div class="flex ml-4 space-x-4 text-white">
+        <a href="#" class="active:text-rosybrown-500">
+          Login
+        </a>
+        <a href="#" class="active:text-rosybrown-500">
+          Cadastro
+        </a>
+      </div>
+      <!-- Hamburger button -->
+      <div id="hamburger-button" class="flex flex-col space-y-1 px-4 py-2 cursor-pointer">
+        <div class="h-1 w-8 bg-white rounded-full"></div>
+        <div class="h-1 w-8 bg-white rounded-full"></div>
+        <div class="h-1 w-8 bg-white rounded-full"></div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="text-white hidden md:hidden">
+      <ul class="flex flex-col justify-center text-rosybrown-500 text-xl capitalize">
+        <li class="border border-fireenginered-900 active:bg-fireenginered-600 p-2">Pré-treino</li>
+        <li class="border border-fireenginered-900 active:bg-fireenginered-600 p-2">Bombas</li>
+        <li class="border border-fireenginered-900 active:bg-fireenginered-600 p-2">Equipamentos</li>
+        <li class="border border-fireenginered-900 active:bg-fireenginered-600 p-2">Nutrição</li>
+        <li class="border border-fireenginered-900 active:bg-fireenginered-600 p-2">Suporte</li>
+      </ul>
+    </div>
+    <div class="flex justify-center p-4">
+      <a
+        href="#"
+        class="flex flex-col md:flex-rol items-center md:justify-center space-x-2"
+      >
         <img
-          class="title__icon"
+          class="size-28 md:size-20 rounded-lg"
           src="assets/marombers.png"
           alt="Logotipo"
         >
-        <h1 class="h1 title__text">
+        <h1 class="text-3xl md:text-7xl text-rosybrown-700 text-shadow-lg shadow-fireenginered-400">
           Marombers
         </h1>
-      </div>
-    </a>
-    <div class="search-bar__container">
+      </a>
+    </div>
+    <div class="flex justify-center text-lg">
       <input
-        class="input input--text search-bar__input"
+        class="md:min-w-80 rounded-l-md border border-rosybrown-700 bg-rosybrown-900 pl-2  text-fireenginered-300 placeholder:text-fireenginered-500"
         type="text"
         name="query"
         id="query"
         placeholder="Pesquise algo..."  
       >
-      <button class="button search-bar__button">
-        <span class="lnr lnr-magnifier"></span>
+      <button class="text-rosybrown-900 rounded-r-md border border-rosybrown-700 border-l-0 px-2 hover:bg-fireenginered-900 active:bg-fireenginered-700 hover:text-white duration-200">
+        Buscar
       </button>
     </div>
-    <nav class="navbar">
-      <ul class="ul navbar__list">
-        <li>Pré-treino</li>
-        <li>Bombas</li>
-        <li>Equipamentos</li>
-        <li>Nutrição</li>
-        <li>Suporte</li>
+    <nav class="hidden md:block">
+      <ul class="flex justify-center space-x-8 text-rosybrown-500 text-xl mt-4 capitalize">
+        <li class="border border-fireenginered-900 rounded-md cursor-pointer hover:underline hover:text-rosybrown-900 hover:bg-fireenginered-300 hover:border-rosybrown-900 active:bg-fireenginered-600 duration-200 p-2">Pré-treino</li>
+        <li class="border border-fireenginered-900 rounded-md cursor-pointer hover:underline hover:text-rosybrown-900 hover:bg-fireenginered-300 hover:border-rosybrown-900 active:bg-fireenginered-600 duration-200 p-2">Bombas</li>
+        <li class="border border-fireenginered-900 rounded-md cursor-pointer hover:underline hover:text-rosybrown-900 hover:bg-fireenginered-300 hover:border-rosybrown-900 active:bg-fireenginered-600 duration-200 p-2">Equipamentos</li>
+        <li class="border border-fireenginered-900 rounded-md cursor-pointer hover:underline hover:text-rosybrown-900 hover:bg-fireenginered-300 hover:border-rosybrown-900 active:bg-fireenginered-600 duration-200 p-2">Nutrição</li>
+        <li class="border border-fireenginered-900 rounded-md cursor-pointer hover:underline hover:text-rosybrown-900 hover:bg-fireenginered-300 hover:border-rosybrown-900 active:bg-fireenginered-600 duration-200 p-2">Suporte</li>
       </ul>
     </nav>
   </header>
-  <section class="section section__container">
-    <h3 class="h3 section__title">
+  <section class="border border-fireenginered-200 m-4 p-4">
+    <h2 class="text-4xl mb-4 text-center md:text-left text-fireenginered-200">
       Suplementos
-    </h3>
-    <ul class="ul section__list">
-      <li>
-        <img src="assets/suplemento-sample.jpg" alt="Suplemento 1">
-      </li>
-      <li>
-        <img src="assets/suplemento-sample.jpg" alt="Suplemento 2">
-      </li>
-      <li>
-        <img src="assets/suplemento-sample.jpg" alt="Suplemento 2">
-      </li>
-    </ul>
+    </h2>
+    <div class="border h-0 border-b-fireenginered-200 mb-4"></div>
+    <div class="flex justify-center md:space-x-8 md:items-center">
+      <div class="hidden md:flex justify-center items-center border rounded-xl border-fireenginered-200 py-8 px-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+        <img
+          class="w-8"
+          src="assets/arrow.png"
+          alt="<"
+        >
+      </div>
+      <ul class="w-full flex flex-col justify-center space-y-8 md:flex-row md:items-center md:space-y-0 md:space-x-6">
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/suplemento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Mega-Bomba Hardcore</h3>
+            <p>R$ 39,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/suplemento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Mega-Bomba Hardcore</h3>
+            <p>R$ 39,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/suplemento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Mega-Bomba Hardcore</h3>
+            <p>R$ 39,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/suplemento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Mega-Bomba Hardcore</h3>
+            <p>R$ 39,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/suplemento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Mega-Bomba Hardcore</h3>
+            <p>R$ 39,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+      </ul>
+      <div class="hidden md:flex justify-center items-center border rounded-xl border-fireenginered-200 py-8 px-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+        <img
+          class="w-8 transform scale-x-[-1]"
+          src="assets/arrow.png"
+          alt=">"
+        >
+      </div>
+    </div>
   </section>
-  <section class="section splitter">
-    <div></div>
-  </section>
-  <section class="section section__container">
-    <h3 class="h3 section__title">
+  <div class="flex justify-center">
+    <div class="w-11/12 border border-b-fireenginered-200 border-dashed"></div>
+  </div>
+  <section class="border border-fireenginered-200 m-4 p-4">
+    <h2 class="text-4xl mb-4 text-center md:text-left text-fireenginered-200">
       Equipamentos
-    </h3>
-    <ul class="ul section__list">
-      <li>
-        <img src="assets/equipamento-sample.jpg" alt="Equipamento 1">
-      </li>
-      <li>
-        <img src="assets/equipamento-sample.jpg" alt="Equipamento 2">
-      </li>
-      <li>
-        <img src="assets/equipamento-sample.jpg" alt="Equipamento 3">
-      </li>
-    </ul>
+    </h2>
+    <div class="border h-0 border-b-fireenginered-200 mb-4"></div>
+    <div class="flex justify-center md:space-x-8 md:items-center">
+      <div class="hidden md:flex justify-center items-center border rounded-xl border-fireenginered-200 py-8 px-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+        <img
+          class="w-8"
+          src="assets/arrow.png"
+          alt="<"
+        >
+      </div>
+      <ul class="w-full flex flex-col justify-center space-y-8 md:flex-row md:items-center md:space-y-0 md:space-x-6">
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/equipamento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Braço Mecânico</h3>
+            <p>R$ 5.999,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/equipamento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Braço Mecânico</h3>
+            <p>R$ 5.999,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/equipamento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Braço Mecânico</h3>
+            <p>R$ 5.999,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/equipamento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Braço Mecânico</h3>
+            <p>R$ 5.999,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+        <li class="border border-fireenginered-200 rounded-xl p-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+          <img
+            class="size-40 rounded-xl mx-auto"
+            src="assets/equipamento-sample.jpg"
+            alt="Suplemento 1"
+          >
+          <div class="flex flex-col items-center text-fireenginered-200 space-y-1">
+            <h3>Braço Mecânico</h3>
+            <p>R$ 5.999,90</p>
+            <button class="w-11/12 border text-rosybrown-900 bg-fireenginered-900 border-fireenginered-500 py-1 hover:bg-fireenginered-800 hover:text-white hover:border-transparent duration-200 uppercase">Comprar</button>
+          </div>
+        </li>
+      </ul>
+      <div class="hidden md:flex justify-center items-center border rounded-xl border-fireenginered-200 py-8 px-4 hover:bg-rosybrown-800 active:bg-rosybrown-700 duration-200 cursor-pointer">
+        <img
+          class="w-8 transform scale-x-[-1]"
+          src="assets/arrow.png"
+          alt=">"
+        >
+      </div>
+    </div>
   </section>
-  <footer class="footer">
-    <h3 class="h3 footer__title">
+  <footer class="bg-fireenginered-200 text-white text-center py-4">
+    <h3 class="py-4 text-xl underline">
       Perguntas Frequentes
     </h3>
-    <ul class="ul footer__list">
-      <li>Posso tomar bomba?</li>
-      <li>Sexo reduz a testosterona?</li>
-      <li>O orçamento baixou. E agora?</li>
-      <li>Treinar em casa é bom?</li>
+    <ul>
+      <li class="cursor-pointer hover:text-rosybrown-800 hover:bg-fireenginered-400 active:bg-fireenginered-300 duration-200">Posso tomar bomba?</li>
+      <li class="cursor-pointer hover:text-rosybrown-800 hover:bg-fireenginered-400 active:bg-fireenginered-300 duration-200">Sexo reduz a testosterona?</li>
+      <li class="cursor-pointer hover:text-rosybrown-800 hover:bg-fireenginered-400 active:bg-fireenginered-300 duration-200">O orçamento baixou. E agora?</li>
+      <li class="cursor-pointer hover:text-rosybrown-800 hover:bg-fireenginered-400 active:bg-fireenginered-300 duration-200">Treinar em casa é bom?</li>
     </ul>
-    <p class="footer__copyright">
+    <p class="py-2 font-bold text-rosybrown-700">
       &copy; 2024 - Marombers
     </p>
   </footer>
